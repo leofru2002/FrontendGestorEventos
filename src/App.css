@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Reset básico */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Noto Serif Display';
   background: #f4f4f4;
   margin: 0;
-  padding-top: 50px; /* Ajuste para evitar que el navbar tape contenido */
+  padding-top: 0; /* Ajuste para evitar que el navbar tape contenido */
   text-align: center;
 }
 
@@ -13,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #007bff;
+  background: #013927;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -195,4 +198,9 @@ body {
 
 .modal .close-button:hover {
   background: darkred;
+}
+
+.font{
+  font-family: 'Noto Serif Display'!important;
+  color: #0f3d25;
 }

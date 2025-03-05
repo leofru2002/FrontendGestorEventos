@@ -12,9 +12,9 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-        <Button variant="contained" color="secondary" className="logout-button" onClick={handleLogout}>
+        {/* <Button variant="contained" color="secondary" className="logout-button" onClick={handleLogout}>
           <FaSignOutAlt /> Cerrar Sesión
-        </Button>
+        </Button> */}
       <App />
     </div>
   );
