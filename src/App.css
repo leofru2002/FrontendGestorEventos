@@ -4,12 +4,11 @@
 /* Reset básico */
 body {
   font-family: 'Noto Serif Display';
-  background: #f4f4f4;
+  background: #f5fffa;
   margin: 0;
-  padding-top: 0; /* Ajuste para evitar que el navbar tape contenido */
+  padding-top: 5%; /* Ajuste para evitar que el navbar tape contenido */
   text-align: center;
 }
-
 /* NAVBAR pegado arriba */
 .navbar {
   position: fixed; /* Fija el navbar arriba */
