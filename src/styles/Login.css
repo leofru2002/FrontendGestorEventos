@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap');
 
 .login-container {
   display: flex;
   height: 100vh;
   width: 100%;
+  padding: 0;
+  top: 0;
+  position: absolute;
 }
 
 .login-left {
   flex: 1;
   background: url('./../img/inicio.jpg') no-repeat center center/cover;
-  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)) , 
-              url('./../img/inicio.jpg') no-repeat center center/cover; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,9 +33,10 @@
   font-weight: lighter;
   margin-top: 10px;
 }
+
 .logo-container {
   display: flex;
-  align-items: center; /* Alinea la imagen con el texto */
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
@@ -44,11 +45,10 @@
   background: url('./../img/logo.jpg') no-repeat center center/cover;
   width: 40px;  
   height: 40px;
-  border-radius: 50%;  /* Hace que la imagen sea circular */
-  object-fit: cover;   /* Asegura que la imagen se recorte bien */
-  margin-right: 10px;  /* Espacio entre la imagen y el texto */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
-
 
 .login-right {
   flex: 1;
@@ -83,7 +83,72 @@
   background: #4c8b64 !important;
   color: white;
   font-weight: bold;
+  left: 4%;
+  width: 94% !important;
 }
-.font{
-  font-family: 'Noto Serif Display'!important;
+
+.font {
+  font-family: 'Noto Serif Display', serif !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .login-overlay {
+    font-size: 1.5rem;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left {
+    height: 40vh;
+    width: 100%;
+  }
+
+  .login-right {
+    height: 60vh;
+    width: 100%;
+    padding-top: 4%;
+    padding-bottom: 8%;
+  }
+
+  .login-overlay {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .login-form {
+    width: 50%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left {
+    height: 30vh;
+  }
+
+  .login-right {
+    height: 70vh;
+  }
+
+  .login-overlay {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .login-form {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .login-button {
+    font-size: 0.9rem;
+    
+  }
 }
