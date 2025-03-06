@@ -60,7 +60,6 @@ const App = () => {
   return (
     <div>
       <Navbar setView={setView} />
-
       {view === "home" && (
         <div className="dashboard-container">
           {/* Sección de contenido */}
@@ -105,22 +104,31 @@ const App = () => {
 
       {view === "events" && (
         <div className="event-container">
-            <h1 className="font">Gestión de Eventos</h1>
-            <button
-              className="btn-overlay"
-              onClick={() => {
-                setEditingEvent(null);
-                setOpenForm(true);
-              }}
-            >
-              Agregar Evento
-            </button>
-            <hr></hr>
-            <EventList
-              events={events}
-              onEditEvent={handleEditEvent}
-              onDeleteEvent={handleDeleteEvent}
+          <h1 className="font">Gestión de Eventos</h1>
+          <button
+            className="button button-event"
+            onClick={() => {
+              setEditingEvent(null);
+              setOpenForm(true);
+            }}
+          >
+            Agregar Evento
+          </button>
+          <div>
+            <EventForm 
+              open={openForm}
+              onClose={() => setOpenForm(false)}
+              onCreateEvent={handleCreateEvent}
+              onUpdateEvent={handleUpdateEvent}
+              editingEvent={editingEvent}
             />
+          </div>
+
+          <EventList
+            events={events}
+            onEditEvent={handleEditEvent}
+            onDeleteEvent={handleDeleteEvent}
+          />
         </div>
       )}
       {view === "calendar" && <CalendarView events={events} />}
