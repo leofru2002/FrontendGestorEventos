@@ -203,3 +203,97 @@ body {
   font-family: 'Noto Serif Display'!important;
   color: #0f3d25;
 }
+
+/* __________________________________________________________________ */
+/* Pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    /* flex-direction: column; */
+    padding: 10px;
+  }
+
+  .navbar ul {
+    /* flex-direction: column; */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar li {
+    font-size: 14px;
+  }
+
+  /* Contenedor principal */
+  .container {
+    padding: 15px;
+    max-width: 100%;
+    margin: 15px;
+  }
+
+  /* Tarjetas de eventos */
+  .event-card {
+    width: 110%;
+  }
+
+  /* Modales */
+  .modal {
+    padding-top: 0;
+    width: 100%;
+    left: 50%;
+    /* transform: translateX(-50%); */
+  }
+
+  /* Ajustes de botones */
+  .button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+
+/* pantallas grandes */
+
+@media (min-width: 1440px) {
+  .dashboard-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+    padding-bottom: 2%;
+  }
+  .event-card {
+    width: 2050px;
+  }
+  
+  .header-image {
+    width: 60%;
+  }
+
+  .header-text {
+    font-size: 3rem;
+  }
+
+  .contain-left,
+  .contain-right {
+    width: 45%;
+  }
+
+  .card-container {
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que las tarjetas se distribuyan mejor */
+  }
+
+  .card {
+    width: 320px;
+    height: 380px;
+  }
+
+  .card h2 {
+    font-size: 2.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}

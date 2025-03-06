@@ -1,5 +1,5 @@
 import React from "react";
-import "./CalendarView.css";
+import "./../styles/CalendarView.css";
 import { FaCalendarAlt } from "react-icons/fa";
 
 
