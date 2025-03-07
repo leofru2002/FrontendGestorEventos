@@ -7,13 +7,6 @@ import Dashboard from "./pages/Dashboard";
 import "./App.css";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-
-
-const ProtectedRoute = ({ element }) => {
-  const isAuthenticated = !!localStorage.getItem("token");
-  return isAuthenticated ? element : <Navigate to="/login" />;
-};
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
