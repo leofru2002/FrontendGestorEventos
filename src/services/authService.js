@@ -18,10 +18,11 @@ export const verifyToken = async () => {
 
   try {
     await axios.get(`${API_BASE_URL}/verify`, {
-      headers: { Authorization: token },
+      headers: { Authorization: `Bearer ${token}` }, // 🔥 Ahora envía "Bearer <token>"
     });
     return { valid: true };
   } catch {
+    localStorage.removeItem("token"); // Elimina token si falla la validación
     return { valid: false };
   }
 };
