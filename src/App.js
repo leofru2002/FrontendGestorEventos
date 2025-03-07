@@ -28,11 +28,15 @@ const App = () => {
   const fetchEvents = async () => {
     try {
       const eventsData = await getEvents();
-      setEvents(eventsData);
+      const filteredEvents = eventsData.filter(event =>
+        event.name && event.date && event.location
+      );
+      setEvents(filteredEvents);
     } catch (error) {
       console.error("Error al obtener eventos:", error);
     }
   };
+  
 
   const handleCreateEvent = async (event) => {
     await createEvent(event);
