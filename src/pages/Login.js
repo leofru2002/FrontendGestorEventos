@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       await loginUser(username, password);
-      window.location.href = `${window.location.origin}/FrontendGestorEventos/#/dashboard`;
+      window.location.replace(`${process.env.PUBLIC_URL}/#/dashboard`);
     } catch (error) {
       alert("Error al iniciar sesión. Verifica tus credenciales.");
     }
